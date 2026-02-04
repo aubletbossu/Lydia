@@ -1,4 +1,34 @@
 <!DOCTYPE html>
+cursor: pointer;
+transition: all 0.25s ease;
+}
+
+
+#yesBtn {
+background: linear-gradient(45deg, #ff4d6d, #ff758f);
+color: white;
+box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+}
+
+
+#yesBtn:hover {
+transform: scale(1.12);
+}
+
+
+#noBtn {
+background-color: #eeeeeeaa;
+color: #555;
+position: relative;
+}
+
+
+.message {
+margin-top: 30px;
+font-size: 22px;
+display: none;
+animation: pop 0.6s ease forwards;
+}
 
 
 @keyframes fadeIn {
@@ -51,7 +81,6 @@ launchHearts();
 });
 
 
-// Make the "No" button run away 😈
 noBtn.addEventListener('mouseover', () => {
 const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
 const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
@@ -70,8 +99,6 @@ heart.style.left = Math.random() * 100 + 'vw';
 heart.style.fontSize = (Math.random() * 20 + 15) + 'px';
 heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
 document.body.appendChild(heart);
-
-
 setTimeout(() => heart.remove(), 6000);
 }
 }
